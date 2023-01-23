@@ -1,0 +1,16 @@
+---
+title: "R Congressional Visualization"
+output: html_notebook
+---
+
+```{r}
+install.packages("tidyverse")
+library(ggplot2)
+
+df <- read.csv("https://raw.githubusercontent.com/jackalnom/congressional-analysis/main/congressional_district_with_parties.csv")
+```
+
+```{r}
+ggplot(df, aes(X.200k., Less.than..10k, colour = Party)) + 
+  geom_point()
+```
